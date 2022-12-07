@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプル 登録内容の更新フォーム</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/update_style.css">
+    <script src="js/update_initialize.js"></script>
+</head>
+<body>
+
+<form class="w-75 mx-auto" id="updatesheet">
+<label class="mt-3"><big><big>登録内容の更新フォーム</big></big></label><br>
+<font color="red"><small>＊変更したい項目をご入力下さい。</small></font><br>
+<p class="mt-3"><big>変更後のお名前(任意)</p>
+<div>
+<input type="text" id="new-name" class="form-control w-100 mt-1" placeholder="タップして入力" value="" />
+</div>
+<div>
+<p class="mt-3">変更後の放課後等デイサービス(任意)
+<select class="form-control w-100 mt-1" id="new-office">
+	<option disabled selected>選択して下さい</option>
+	<option value="smileday">スマイル</option>
+	<option value="temu">てむてむ</option>
+	<option value="hoya">ほやほや</option>
+	<option value="naru">なるなる</option>
+</select>
+</p>
+</div>
+<input type="submit" id="submit" class="mt-4 btn btn-primary" value="送信" >	<input type="button" id="cancel" class="mt-4 btn" value="キャンセル" >
+
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="js/update_form.js"></script>
+<script>
+document.getElementById('cancel').addEventListener('click', () => {
+	if(window.confirm('登録を中止しますか？')){
+		window.close();
+	}else event.preventDefault();
+});
+</script>
+
+</body>
+</html>
