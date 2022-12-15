@@ -1,39 +1,63 @@
-$(window).load(function(){
-	const liffId = "1657662321-nR14gmQy";
-	initializeLiff(liffId);
-});
-
-function initializeLiff(liffId){
+const id = "1657662321-pL1Lqjzn";
+window.onload = function(e){
 	liff.init({
-		liffId:liffId
+		liffId: id
 	}).then(() =>{
 		initializeApp();
 	}).catch((err) => {
+		window.alert(err);
 		console.log('LIFF Initialization failed ', err);
 	});
+};
+
+function initializeApp() {
+    // ログインチェック
+    if (liff.isLoggedIn()) {
+        //ログイン済
+
+    } else {
+        // 未ログイン
+        let result = window.confirm("LINE Loginしますか？");
+        if(result) {
+            liff.login();
+        }
+    }
 }
 
 function sendText(text){
-	liff.sendMessages([{
-		'type': 'text',
-		'text': text
-	}]).then(function(){
-		liff.closeWindow();
-	}).catch(funciont(error){
-		window.alert('Failed to send message ' + error);
-	});
+	if(!liff.isInClient()){
+		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+	}else{
+		liff.sendMessages([
+			{
+			type: 'text',
+			text: text
+			}
+		]).then(function(){
+			liff.closeWindow();
+		}).catch(function(error){
+			window.alert('Failed to send message ' + error);
+		});
+	}
 }
 
 const params = (new URL(document.location)).searchParams;
 const key = params.get('key');
 
-$(function(){
+$(function(){	
 	$('form').submit(function(){
 		const newName = document.getElementById("new-name").value;
-		const newOffice= document.getElementById("new-office").value;
-		const message= "";
-		if(newName !== "") message = message + '${newName}\n';
-		if(document.getElementById("new-office").selectedIndex !== 0) message = message + '${newOffice}';
+		const newOffice = document.getElementById("new-office").value;
+		let message = '';
+		
+		if(newName!==''){
+			message = '[変更後の児童名]\n' + newName + '\n';
+		}
+		if(newOffice==='smileday') message = message + '[変更後の事業所]\nスマイル\n' + newOffice;
+		else if(newOffice==='temu') message = message + '[変更後の事業所]\nてむてむ\n' + newOffice;
+		if(newOffice==='hoya') message = message + '[変更後の事業所]\nほやほや\n' + newOffice;
+		if(newOffice==='naru') message = message + '[変更後の事業所]\nなるなる\n' + newOffice;
+		
 		sendText(message);
 		return false;
 	});
