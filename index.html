@@ -1,13 +1,14 @@
-﻿<html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <title>サンプル 登録内容の更新フォーム</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="js/update_style.css">
-    <script src="js/update_initialize.js"></script>
 </head>
 <body>
 
@@ -37,14 +38,20 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-<script src="js/update_form.js"></script>
+<script src="js/update_initialize.js"></script>
 <script>
+document.getElementById('submit').addEventListener('click', () => {
+	if(document.getElementById('new-name').value === "" && document.getElementById('new-ofice').selectedIndex === 0) event.preventDefault();
+	if(window.confirm('登録内容を更新しますか？')){
+		return true;
+	}else event.preventDefault();
+}, false);
+
 document.getElementById('cancel').addEventListener('click', () => {
 	if(window.confirm('登録を中止しますか？')){
 		window.close();
 	}else event.preventDefault();
 });
 </script>
-
 </body>
 </html>
