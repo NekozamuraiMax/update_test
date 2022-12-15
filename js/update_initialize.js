@@ -55,13 +55,13 @@ $(function(){
 		}
 		if(message !== '') message = message + '\n';
 		if(newOffice==='smileday'){
-			message = message + '[変更後の事業所]\nスマイル\n';
+			message = message + '[変更後の事業所]\nスマイル';
 		}else if(newOffice==='temu'){
-			message = message + '[変更後の事業所]\nてむてむ\n';
+			message = message + '[変更後の事業所]\nてむてむ';
 		}else if(newOffice==='hoya'){
-			message = message + '[変更後の事業所]\nほやほや\n';
+			message = message + '[変更後の事業所]\nほやほや';
 		}else if(newOffice==='naru'){
-			message = message + '[変更後の事業所]\nなるなる\n';
+			message = message + '[変更後の事業所]\nなるなる';
 		}
 		
 		sendText(message);
