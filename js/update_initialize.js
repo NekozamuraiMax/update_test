@@ -53,10 +53,10 @@ $(function(){
 		if(newName!==''){
 			message = '[変更後の児童名]\n' + newName + '\n';
 		}
-		if(newOffice==='smileday') message = message + '[変更後の事業所]\nスマイル\n' + newOffice;
-		else if(newOffice==='temu') message = message + '[変更後の事業所]\nてむてむ\n' + newOffice;
-		if(newOffice==='hoya') message = message + '[変更後の事業所]\nほやほや\n' + newOffice;
-		if(newOffice==='naru') message = message + '[変更後の事業所]\nなるなる\n' + newOffice;
+		if(newOffice==='smileday') message = message + '[変更後の事業所]\nスマイル\n';
+		else if(newOffice==='temu') message = message + '[変更後の事業所]\nてむてむ\n';
+		if(newOffice==='hoya') message = message + '[変更後の事業所]\nほやほや\n';
+		if(newOffice==='naru') message = message + '[変更後の事業所]\nなるなる\n';
 		
 		sendText(message);
 		return false;
