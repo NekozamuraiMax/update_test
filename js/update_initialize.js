@@ -1,4 +1,7 @@
-const id = "1657662321-pL1Lqjzn";
+const url = new URL(document.location);
+const params = new URLSearchParams(url.search);
+const id = params.get('id');
+
 window.onload = function(e){
 	liff.init({
 		liffId: id
