@@ -1,3 +1,54 @@
 #cancel{
 	background-color: silver;
 }
+
+#child1-update{
+	display: none;
+}
+
+#child2-update{
+	display: none;
+}
+
+#child3-update{
+	display: none;
+}
+
+#delete-msg1{
+	display: none;
+	background-color: red;
+}
+
+#delete-msg2{
+	display: none;
+	background-color: red;
+}
+
+#delete-msg3{
+	display: none;
+	background-color: red;
+}
+
+#delete1{
+	background-color: silver;
+}
+
+#delete2{
+	background-color: silver;
+}
+
+#delete3{
+	background-color: silver;
+}
+
+#back1{
+	background-color: deepskyblue;
+}
+
+#back2{
+	background-color: deepskyblue;
+}
+
+#back3{
+	background-color: deepskyblue;
+}
