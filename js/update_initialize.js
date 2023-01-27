@@ -1,6 +1,13 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
 const id = params.get('id');
+const parent = params.get('parent');
+const child1 = params.get('child1');
+const child2 = params.get('child2');
+const child3 = params.get('child3');
+const office1= params.get('office1');
+const office2= params.get('office2');
+const office3= params.get('office3');
 
 window.onload = function(e){
 	liff.init({
@@ -17,7 +24,7 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-
+	
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
@@ -43,9 +50,6 @@ function sendText(text){
 		});
 	}
 }
-
-const params = (new URL(document.location)).searchParams;
-const key = params.get('key');
 
 $(function(){	
 	$('form').submit(function(){
