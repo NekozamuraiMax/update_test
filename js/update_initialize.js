@@ -21,11 +21,23 @@ window.onload = function(e){
 };
 
 const parent_name = document.getElementById("parent-name");
+const child1_name = document.getElementById("child1");
+const child2_name = document.getElementById("child2");
+const child3_name = document.getElementById("child3");
+const child1_office = document.getElementById("office1");
+const child2_office = document.getElementById("office2");
+const child3_office = document.getElementById("office3");
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
 	parent_name.value = parent;
+	child1_name.value = child1;
+	child2_name.value = child2;
+	child3_name.value = child3;
+	child1_office.value = office1;
+	child2_office.vaule = office2;
+	child3_office.value = office3;
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
