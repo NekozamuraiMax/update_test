@@ -20,11 +20,12 @@ window.onload = function(e){
 	});
 };
 
+const parent_name = document.getElementById("parent_name");
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-	
+	parent_name.value = parent;
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
