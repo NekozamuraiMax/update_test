@@ -20,7 +20,7 @@ window.onload = function(e){
 	});
 };
 
-const parent_name = document.getElementById("parent_name");
+const parent_name = document.getElementById("parent-name");
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
