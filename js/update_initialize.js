@@ -27,9 +27,9 @@ const child3_name = document.getElementById("child3");
 const child1_office = document.getElementById("office1");
 const child2_office = document.getElementById("office2");
 const child3_office = document.getElementById("office3");
-const child1_update = document.getElementById("child1_update");
-const child2_update = document.getElementById("child2_update");
-const child3_update = document.getElementById("child3_update");
+const child1_update = document.getElementById("child1-update");
+const child2_update = document.getElementById("child2-update");
+const child3_update = document.getElementById("child3-update");
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
