@@ -27,6 +27,9 @@ const child3_name = document.getElementById("child3");
 const child1_office = document.getElementById("office1");
 const child2_office = document.getElementById("office2");
 const child3_office = document.getElementById("office3");
+const child1_update = document.getElementById("child1_update");
+const child2_update = document.getElementById("child2_update");
+const child3_update = document.getElementById("child3_update");
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
@@ -38,6 +41,12 @@ function initializeApp() {
 	child1_office.value = office1;
 	child2_office.vaule = office2;
 	child3_office.value = office3;
+	if(child1 !== "") child1_update.style.display = "block";
+	else child1_update.style.display = "none";
+	if(child2 !== "") child2_update.style.display = "block";
+	else child2_update.style.display = "none";
+	if(child3 !== "") child3_update.style.display = "block";
+	else child3_update.style.display = "none";
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
