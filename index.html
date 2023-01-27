@@ -15,15 +15,14 @@
 <form class="w-75 mx-auto" id="updatesheet">
 <label class="mt-3"><big><big>登録内容の更新フォーム</big></big></label><br>
 <font color="red"><small>＊変更したい項目をご入力下さい。</small></font><br>
-<p class="mt-3"><big>利用者様のお名前</p>
-<div>
+<div id="parent_update" stylechild1ing: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+<p class="mt-3"><bi>利用者様のお名前</p>
 <input type="text" id="parent-name" class="form-control w-100 mt-1" value="" />
 </div>
+<div id="child1_update" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
 <p class="mt-3"><big>児童名(１人目)</p>
-<div>
 <input type="text" id="child1" class="form-control w-100 mt-1" value="" />
-</div>
-<div>
+
 <p class="mt-3">放課後等デイサービス
 <select class="form-control w-100 mt-1" id="office1">
 	<option value="smileday">スマイル</option>
@@ -33,12 +32,9 @@
 </select>
 </p>
 </div>
-
+<div id="child2_update" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
 <p class="mt-3"><big>児童名(２人目)</p>
-<div>
 <input type="text" id="child2" class="form-control w-100 mt-1" value="" />
-</div>
-<div>
 <p class="mt-3">放課後等デイサービス
 <select class="form-control w-100 mt-1" id="office2">
 	<option value="smileday">スマイル</option>
@@ -48,12 +44,10 @@
 </select>
 </p>
 </div>
-	
+
+<div id="child3_update" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
 <p class="mt-3"><big>児童名(３人目)</p>
-<div>
 <input type="text" id="child3" class="form-control w-100 mt-1" value="" />
-</div>
-<div>
 <p class="mt-3">放課後等デイサービス
 <select class="form-control w-100 mt-1" id="office3">
 	<option value="smileday">スマイル</option>
@@ -75,7 +69,8 @@
 <script>
 const formId = document.getElementById('updatesheet');
 formId.onchange = () => {
-	if(document.getElementById('new-office').selectedIndex !== 0 || document.getElementById('new-name').value !== ""){
+	if(document.getElementById('parent-name').value !== ""){
+		
 		submit.disabled = false;
 	}else submit.disabled = true;
 };
