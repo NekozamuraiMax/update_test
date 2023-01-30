@@ -3,15 +3,15 @@
 }
 
 #child1-update{
-	display: none;
+	display: block;
 }
 
 #child2-update{
-	display: none;
+	display: block;
 }
 
 #child3-update{
-	display: none;
+	display: block;
 }
 
 #delete-msg1{
