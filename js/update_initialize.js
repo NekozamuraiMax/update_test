@@ -1,5 +1,6 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
+window.alert(params);
 const id = params.get('id');
 const param_parent = params.get('parent').toString();
 const param_child1 = params.get('child1').toString();
@@ -34,7 +35,6 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-	window.alert(param_parent);
 	parent_name.value = param_parent;
 	child1_name.value = param_child1;
 	child2_name.value = param_child2;
