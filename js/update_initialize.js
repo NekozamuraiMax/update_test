@@ -1,13 +1,13 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
 const id = params.get('id');
-const parent = params.get('parent').toString();
-const child1 = params.get('child1').toString();
-const child2 = params.get('child2').toString();
-const child3 = params.get('child3').toString();
-const office1= params.get('office1').toString();
-const office2= params.get('office2').toString();
-const office3= params.get('office3').toString();
+const param_parent = params.get('parent').toString();
+const param_child1 = params.get('child1').toString();
+const param_child2 = params.get('child2').toString();
+const param_child3 = params.get('child3').toString();
+const param_office1= params.get('office1').toString();
+const param_office2= params.get('office2').toString();
+const param_office3= params.get('office3').toString();
 
 window.onload = function(e){
 	liff.init({
@@ -34,18 +34,18 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
-	parent_name.value = parent;
-	child1_name.value = child1;
-	child2_name.value = child2;
-	child3_name.value = child3;
-	child1_office.value = office1;
-	child2_office.vaule = office2;
-	child3_office.value = office3;
-	if(child1 !== "") child1_update.style.display = "block";
+	parent_name.value = param_parent;
+	child1_name.value = param_child1;
+	child2_name.value = param_child2;
+	child3_name.value = param_child3;
+	child1_office.value = param_office1;
+	child2_office.vaule = param_office2;
+	child3_office.value = param_office3;
+	if(param_child1 !== "") child1_update.style.display = "block";
 	else child1_update.style.display = "none";
-	if(child2 !== "") child2_update.style.display = "block";
+	if(param_child2 !== "") child2_update.style.display = "block";
 	else child2_update.style.display = "none";
-	if(child3 !== "") child3_update.style.display = "block";
+	if(param_child3 !== "") child3_update.style.display = "block";
 	else child3_update.style.display = "none";
     } else {
         // 未ログイン
