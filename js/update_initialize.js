@@ -34,6 +34,7 @@ function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
+	window.alert(param_parent);
 	parent_name.value = param_parent;
 	child1_name.value = param_child1;
 	child2_name.value = param_child2;
@@ -47,7 +48,6 @@ function initializeApp() {
 	else child2_update.style.display = "none";
 	if(param_child3 !== "") child3_update.style.display = "block";
 	else child3_update.style.display = "none";
-	window.alert(param_parent);
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
