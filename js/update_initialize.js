@@ -40,15 +40,27 @@ function initializeApp() {
 	child1_name.value = child1;
 	child2_name.value = child2;
 	child3_name.value = child3;
-	child1_office.value = office1;
-	child2_office.vaule = office2;
-	child3_office.value = office3;
-	if(child1 !== "") child1_update.style.display = "block";
-	else child1_update.style.display = "none";
-	if(child2 !== "") child2_update.style.display = "block";
-	else child2_update.style.display = "none";
-	if(child3 !== "") child3_update.style.display = "block";
-	else child3_update.style.display = "none";
+	if(child1 !== ""){
+		child1_update.style.display = "block";
+		if(office1==='スマイル') child1_office.value = 'smileday';
+		else if(office1==='てむてむ') child1_office.value = 'temu';
+		else if(office1==='ほやほや') child1_office.value = 'hoya';
+		else if(office1==='なるなる') child1_office.value = 'naru';
+	}else child1_update.style.display = "none";
+	if(child2 !== ""){
+		child2_update.style.display = "block";
+		if(office2==='スマイル') child1_office.value = 'smileday';
+		else if(office2==='てむてむ') child2_office.value = 'temu';
+		else if(office2==='ほやほや') child2_office.value = 'hoya';
+		else if(office2==='なるなる') child2_office.value = 'naru';	
+	}else child2_update.style.display = "none";
+	if(child3 !== ""){
+		child3_update.style.display = "block";
+		if(office3==='スマイル') child1_office.value = 'smileday';
+		else if(office3==='てむてむ') child3_office.value = 'temu';
+		else if(office3==='ほやほや') child3_office.value = 'hoya';
+		else if(office3==='なるなる') child3_office.value = 'naru';
+	}else child3_update.style.display = "none";
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
