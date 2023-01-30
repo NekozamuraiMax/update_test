@@ -47,6 +47,7 @@ function initializeApp() {
 	else child2_update.style.display = "none";
 	if(param_child3 !== "") child3_update.style.display = "block";
 	else child3_update.style.display = "none";
+	window.alert(param_parent);
     } else {
         // 未ログイン
         let result = window.confirm("LINE Loginしますか？");
