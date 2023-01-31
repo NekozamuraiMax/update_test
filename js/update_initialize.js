@@ -43,9 +43,9 @@ function initializeApp() {
     if (liff.isLoggedIn()) {
         //ログイン済
 	parent_name.value = parent;
-	child1_name.value = child1;	child1_post = child1;
-	child2_name.value = child2;	child2_post = child2;
-	child3_name.value = child3;	child3_post = child3;
+	child1_name.value = child1;	child1_post.value = child1;
+	child2_name.value = child2;	child2_post.value = child2;
+	child3_name.value = child3;	child3_post.value = child3;
 	if(child1 !== ""){
 		child1_update.style.display = "block";
 		if(office1==='スマイル'){child1_office.value = 'smileday';	office1_post.value = 'smileday';}
