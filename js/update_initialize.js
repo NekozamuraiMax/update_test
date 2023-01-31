@@ -40,6 +40,7 @@ const child3_post = document.getElementById("child3-post");
 const office1_post= document.getElementById("office1-post");
 const office2_post= document.getElementById("office2-post");
 const office3_post= document.getElementById("office3-post");
+const child1_none = document.getElementById("child1_none");
 
 function initializeApp() {
     // ログインチェック
