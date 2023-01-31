@@ -31,35 +31,41 @@ const child3_office = document.getElementById("office3");
 const child1_update = document.getElementById("child1-update");
 const child2_update = document.getElementById("child2-update");
 const child3_update = document.getElementById("child3-update");
+const child1_post = document.getElementById("child1-post");
+const child2_post = document.getElementById("child2-post");
+const child3_post = document.getElementById("child3-post");
+const office1_post= document.getElementById("office1-post");
+const office2_post= document.getElementById("office2-post");
+const office3_post= document.getElementById("office3-post");
 
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
         //ログイン済
 	parent_name.value = parent;
-	child1_name.value = child1;
-	child2_name.value = child2;
-	child3_name.value = child3;
+	child1_name.value = child1;	child1_post = child1;
+	child2_name.value = child2;	child2_post = child2;
+	child3_name.value = child3;	child3_post = child3;
 	if(child1 !== ""){
 		child1_update.style.display = "block";
-		if(office1==='スマイル') child1_office.value = 'smileday';
-		else if(office1==='てむてむ') child1_office.value = 'temu';
-		else if(office1==='ほやほや') child1_office.value = 'hoya';
-		else if(office1==='なるなる') child1_office.value = 'naru';
+		if(office1==='スマイル'){child1_office.value = 'smileday';	office1_post.value = 'smileday';}
+		else if(office1==='てむてむ'){child1_office.value = 'temu'; office1_post.value = 'temu';}
+		else if(office1==='ほやほや'){child1_office.value = 'hoya'; office1_post.value = 'hoya';}
+		else if(office1==='なるなる'){child1_office.value = 'naru'; office1_post.value = 'naru';}
 	}else child1_update.style.display = "none";
 	if(child2 !== ""){
 		child2_update.style.display = "block";
-		if(office2==='スマイル') child1_office.value = 'smileday';
-		else if(office2==='てむてむ') child2_office.value = 'temu';
-		else if(office2==='ほやほや') child2_office.value = 'hoya';
-		else if(office2==='なるなる') child2_office.value = 'naru';	
+		if(office2==='スマイル'){child2_office.value = 'smileday'; office2_post.value = 'smileday';}
+		else if(office2==='てむてむ'){child2_office.value = 'temu'; office2_post.value = 'temu';}
+		else if(office2==='ほやほや'){child2_office.value = 'hoya'; office2_post.value = 'hoya';}
+		else if(office2==='なるなる'){child2_office.value = 'naru'; office2_post.value = 'naru';}	
 	}else child2_update.style.display = "none";
 	if(child3 !== ""){
 		child3_update.style.display = "block";
-		if(office3==='スマイル') child1_office.value = 'smileday';
-		else if(office3==='てむてむ') child3_office.value = 'temu';
-		else if(office3==='ほやほや') child3_office.value = 'hoya';
-		else if(office3==='なるなる') child3_office.value = 'naru';
+		if(office3==='スマイル'){child3_office.value = 'smileday'; office3_post.value = 'smileday';}
+		else if(office3==='てむてむ'){child3_office.value = 'temu'; office3_post.value = 'temu';}
+		else if(office3==='ほやほや'){child3_office.value = 'hoya'; office3_post.value = 'hoya';}
+		else if(office3==='なるなる'){child3_office.value = 'naru'; office3_post.value = 'naru';}
 	}else child3_update.style.display = "none";
     } else {
         // 未ログイン
