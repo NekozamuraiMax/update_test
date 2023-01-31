@@ -3,30 +3,27 @@
 }
 
 #child1-update{
-	display: block;
+	display: none;
 }
 
 #child2-update{
-	display: block;
+	display: none;
 }
 
 #child3-update{
-	display: block;
+	display: none;
 }
 
 #delete-msg1{
 	display: none;
-	background-color: red;
 }
 
 #delete-msg2{
 	display: none;
-	background-color: red;
 }
 
 #delete-msg3{
 	display: none;
-	background-color: red;
 }
 
 #delete1{
