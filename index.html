@@ -17,6 +17,7 @@
 <font color="red"><small>＊変更したい項目をご入力下さい。</small></font><br>
 <div id="parent_update" stylechild1ing: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
 <p class="mt-3"><bi>利用者様のお名前</p>
+<div id="parent_none">お名前が入力されていません。</div><div id="parent_notchar">お名前に記号を含めないでください。</div>
 <input type="text" id="parent-name" class="form-control w-100 mt-1"/><p></p>
 <div id="delete-msg1"><small>削除しました。</small><div style="text-align:right;"><input type="button" id="back1" class="mt-4 btn" value="元に戻す" ></div></div>
 </div>
@@ -89,9 +90,14 @@ formId.onchange = () => {
 };
 
 document.getElementById('submit').addEventListener('click', () => {
-	if(window.confirm('登録内容を更新しますか？')){
-		return true;
-	}else event.preventDefault();
+	let err = -1;
+	if(err > -1){
+		alert("赤いところを直して、もう一度、送信ボタンを押してください。");
+		event.preventDefault();
+	}else{
+		if(window.confirm("更新してよろしいですか？")) return true;
+		else event.preventDefault();
+	}
 }, false);
 
 document.getElementById('cancel').addEventListener('click', () => {
