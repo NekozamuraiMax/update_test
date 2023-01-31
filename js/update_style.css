@@ -1,3 +1,18 @@
+#child1_none{
+	display: none;
+	background-color: red;
+}
+
+#child1_nochar{
+	display: none;
+	background-color: red;
+}
+
+#child1_dup{
+	display: none;
+	background-color: red;
+}
+
 #cancel{
 	background-color: silver;
 }
