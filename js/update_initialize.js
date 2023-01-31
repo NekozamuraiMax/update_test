@@ -49,6 +49,8 @@ const child2_dup  = document.getElementById("child2_dup");
 const child3_none = document.getElementById("child3_none");
 const child3_notchar = document.getElementById("child3_notchar");
 const child3_dup  = document.getElementById("child3_dup");
+const parent_none = document.getElementById("parent_none");
+const parent_notchar = document.getElementById("parent_notchar");
 
 function initializeApp() {
     // ログインチェック
