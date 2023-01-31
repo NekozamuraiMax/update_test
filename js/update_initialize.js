@@ -41,6 +41,14 @@ const office1_post= document.getElementById("office1-post");
 const office2_post= document.getElementById("office2-post");
 const office3_post= document.getElementById("office3-post");
 const child1_none = document.getElementById("child1_none");
+const child1_notchar = document.getElementById("child1_notchar");
+const child1_dup  = document.getElementById("child1_dup");
+const child2_none = document.getElementById("child2_none");
+const child2_notchar = document.getElementById("child2_notchar");
+const child2_dup  = document.getElementById("child2_dup");
+const child3_none = document.getElementById("child3_none");
+const child3_notchar = document.getElementById("child3_notchar");
+const child3_dup  = document.getElementById("child3_dup");
 
 function initializeApp() {
     // ログインチェック
