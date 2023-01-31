@@ -3,12 +3,42 @@
 	background-color: red;
 }
 
-#child1_nochar{
+#child1_notchar{
 	display: none;
 	background-color: red;
 }
 
 #child1_dup{
+	display: none;
+	background-color: red;
+}
+
+#child2_none{
+	display: none;
+	background-color: red;
+}
+
+#child2_notchar{
+	display: none;
+	background-color: red;
+}
+
+#child2_dup{
+	display: none;
+	background-color: red;
+}
+
+#child3_none{
+	display: none;
+	background-color: red;
+}
+
+#child3_notchar{
+	display: none;
+	background-color: red;
+}
+
+#child3_dup{
 	display: none;
 	background-color: red;
 }
