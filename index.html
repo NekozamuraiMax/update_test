@@ -93,6 +93,18 @@ formId.onchange = () => {
 document.getElementById('submit').addEventListener('click', () => {
 	let err = -1;
 	const regex = new RegExp('[!-/:-@\[-`{-~]+', 'g');
+	if(parent_name.value === ''){
+		parent_none.style.display = "block";
+		parent_notchar.style.display = "none";
+		err = err + 1;
+	}else if(regex.test(parent_name.value)){
+		parent_notchar.style.display = "block";
+		parent_none.style.display = "none";
+		err = err + 1;
+	}else{
+		parent_notchar.style.display = "none";
+		parent_none.style.display = "none";
+	}
 
 	
 	if(err > -1){
