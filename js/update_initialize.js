@@ -109,27 +109,33 @@ function sendText(text){
 
 $(function(){	
 	$('form').submit(function(){
-		const newName = document.getElementById("new-name").value;
-		const newOffice = document.getElementById("new-office").value;
-		let message = '';
+		let message = '[登録の更新]\n';
 		
-		if(newName!==''){
-			message = '[変更後の児童名]\n' + newName;
+		message = message + '[利用者名]\n' + parent_name.value;
+		let count = 0;
+		if(child1_update.style.display === "block"){
+			count = count + 1;
+			message = message + '\n[児童名' + count + ']\n' + child1_name.value + '\n' + '[事業所' + count + ']\n';
+			if(child1_office === 'smileday') message = message + 'スマイル';
+			else if(child1_office === 'temu')message = message + 'てむてむ';
+			else if(child1_office === 'hoya')message = message + 'ほやほや';
+			else if(child1_office === 'naru')message = message + 'なるなる';
 		}
-		if(newOffice==='smileday'){
-			if(message !== '') message = message + '\n';
-			message = message + '[変更後の事業所]\nスマイル';
-		}else if(newOffice==='temu'){
-			if(message !== '') message = message + '\n';
-			message = message + '[変更後の事業所]\nてむてむ';
-		}else if(newOffice==='hoya'){
-			if(message !== '') message = message + '\n';
-			message = message + '[変更後の事業所]\nほやほや';
-		}else if(newOffice==='naru'){
-			if(message !== '') message = message + '\n';
-			message = message + '[変更後の事業所]\nなるなる';
+		if(child2_update.style.display === "block"){
+			count = count + 1;
+			message = message + '\n[児童名' + count + ']\n' + child2_name.value + '\n' + '[事業所' + count + ']\n';
+			if(child2_office === 'smileday') message = message + 'スマイル';
+			else if(child2_office === 'temu')message = message + 'てむてむ';
+			else if(child2_office === 'hoya')message = message + 'ほやほや';
+			else if(child2_office === 'naru')message = message + 'なるなる';
 		}
-		
+		if(child3_update.style.display === "block"){
+			message = message + '\n[児童名' + count + ']\n' + child3_name.value + '\n' + '[事業所' + count + ']\n';
+			if(child3_office === 'smileday') message = message + 'スマイル';
+			else if(child3_office === 'temu')message = message + 'てむてむ';
+			else if(child3_office === 'hoya')message = message + 'ほやほや';
+			else if(child3_office === 'naru')message = message + 'なるなる';
+		}
 		sendText(message);
 		return false;
 	});
