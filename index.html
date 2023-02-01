@@ -92,7 +92,9 @@ formId.onchange = () => {
 
 document.getElementById('submit').addEventListener('click', () => {
 	let err = -1;
+	const regex = new RegExp('[!-/:-@\[-`{-~]+', 'g');
 
+	
 	if(err > -1){
 		alert("赤いところを直して、もう一度、送信ボタンを押してください。");
 		event.preventDefault();
