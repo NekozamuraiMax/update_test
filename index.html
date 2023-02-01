@@ -85,7 +85,10 @@
 document.getElementById('submit').addEventListener('click', () => {
 	let err = -1;
 	const regex = new RegExp('[!-/:-@\[-`{-~]+', 'g');
-	if(regex.test(parent_name.value)){
+	if(parent_name.value === ''){
+		parent_none.style.display = "block";
+		parent_notchar.style.display = "none";
+	}else if(regex.test(parent_name.value)){
 		parent_notchar.style.display = "block";
 		parent_none.style.display = "none";
 		err = err + 1;
