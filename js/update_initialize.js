@@ -116,26 +116,26 @@ $(function(){
 		if(child1_update.style.display === "block"){
 			count = count + 1;
 			message = message + '\n[児童名' + count + ']\n' + child1_name.value + '\n' + '[事業所' + count + ']\n';
-			if(child1_office === 'smileday') message = message + 'スマイル';
-			else if(child1_office === 'temu')message = message + 'てむてむ';
-			else if(child1_office === 'hoya')message = message + 'ほやほや';
-			else if(child1_office === 'naru')message = message + 'なるなる';
+			if(child1_office.value === 'smileday') message = message + 'スマイル';
+			else if(child1_office.value === 'temu')message = message + 'てむてむ';
+			else if(child1_office.value === 'hoya')message = message + 'ほやほや';
+			else if(child1_office.value === 'naru')message = message + 'なるなる';
 		}
 		if(child2_update.style.display === "block"){
 			count = count + 1;
 			message = message + '\n[児童名' + count + ']\n' + child2_name.value + '\n' + '[事業所' + count + ']\n';
-			if(child2_office === 'smileday') message = message + 'スマイル';
-			else if(child2_office === 'temu')message = message + 'てむてむ';
-			else if(child2_office === 'hoya')message = message + 'ほやほや';
-			else if(child2_office === 'naru')message = message + 'なるなる';
+			if(child2_office.value === 'smileday') message = message + 'スマイル';
+			else if(child2_office.value === 'temu')message = message + 'てむてむ';
+			else if(child2_office.value === 'hoya')message = message + 'ほやほや';
+			else if(child2_office.value === 'naru')message = message + 'なるなる';
 		}
 		if(child3_update.style.display === "block"){
 			count = count + 1;
 			message = message + '\n[児童名' + count + ']\n' + child3_name.value + '\n' + '[事業所' + count + ']\n';
-			if(child3_office === 'smileday') message = message + 'スマイル';
-			else if(child3_office === 'temu')message = message + 'てむてむ';
-			else if(child3_office === 'hoya')message = message + 'ほやほや';
-			else if(child3_office === 'naru')message = message + 'なるなる';
+			if(child3_office.value === 'smileday') message = message + 'スマイル';
+			else if(child3_office.value === 'temu')message = message + 'てむてむ';
+			else if(child3_office.value === 'hoya')message = message + 'ほやほや';
+			else if(child3_office.value === 'naru')message = message + 'なるなる';
 		}
 		sendText(message);
 		return false;
