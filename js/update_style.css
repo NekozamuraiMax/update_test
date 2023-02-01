@@ -1,3 +1,13 @@
+#parent_none{
+	display: none;
+	background-color: red;
+}
+
+#parent_notchar{
+	display: none;
+	background-color: red;
+}
+
 #child1_none{
 	display: none;
 	background-color: red;
