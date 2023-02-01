@@ -112,16 +112,24 @@ document.getElementById('submit').addEventListener('click', () => {
 			child1_dup.style.display = "none";
 			child1_none.style.display= "none";
 			err = err + 1;
-		}else if(child2_update.style.display === "block" && child2_name.value === child1_name.value){
-			child1_dup.style.display = "block";
-			child1_none.style.display = "none";
-			child1_notchar.style.display = "none";
-			err = err + 1;
-		}else if(child3_update.style.display === "block" && child3_name.value === child1_name.value){
-			child1_dup.style.display = "block";
-			child1_none.style.display = "none";
-			child1_notchar.style.display = "none";
-			err = err + 1;
+		}else if(child2_update.style.display === "block" && child2_name.value !== ""){
+			let tmp_str1 = triming(child1_name.value);
+			let tmp_str2 = triming(child2_name.value);
+			if(tmp_str1 === tmp_str2){
+				child1_dup.style.display = "block";
+				child1_none.style.display = "none";
+				child1_notchar.style.display = "none";
+				err = err + 1;
+			}
+		}else if(child3_update.style.display === "block" && child3_name.value !== ""){
+			let tmp_str1 = triming(child1_name.value);
+			let tmp_str3 = triming(child3_name.value);
+			if(tmp_str1 === tmp_str3){
+				child1_dup.style.display = "block";
+				child1_none.style.display = "none";
+				child1_notchar.style.display = "none";
+				err = err + 1;
+			}
 		}else{
 			child1_none.style.display = "none";
 			child1_dup.style.display = "none";
@@ -139,16 +147,24 @@ document.getElementById('submit').addEventListener('click', () => {
 			child2_dup.style.display = "none";
 			child2_none.style.display= "none";
 			err = err + 1;
-		}else if(child1_update.style.display === "block" && child1_name.value === child2_name.value){
-			child2_dup.style.display = "block";
-			child2_none.style.display = "none";
-			child2_notchar.style.display = "none";
-			err = err + 1;
-		}else if(child3_update.style.display === "block" && child3_name.value === child2_name.value){
-			child2_dup.style.display = "block";
-			child2_none.style.display = "none";
-			child2_notchar.style.display = "none";
-			err = err + 1;
+		}else if(child1_update.style.display === "block" && child1_name.value !== ""){
+			let tmp_str1 = triming(child1_name.value);
+			let tmp_str2 = triming(child2_name.value);
+			if(tmp_str1 === tmp_str2){
+				child2_dup.style.display = "block";
+				child2_none.style.display = "none";
+				child2_notchar.style.display = "none";
+				err = err + 1;
+			}
+		}else if(child3_update.style.display === "block" && child3_name.value !== ""){
+			let tmp_str2 = triming(child2_name.value);
+			let tmp_str3 = triming(child3_name.value);
+			if(tmp_str2 === tmp_str3){
+				child2_dup.style.display = "block";
+				child2_none.style.display = "none";
+				child2_notchar.style.display = "none";
+				err = err + 1;
+			}
 		}else{
 			child2_none.style.display = "none";
 			child2_dup.style.display = "none";
@@ -166,16 +182,24 @@ document.getElementById('submit').addEventListener('click', () => {
 			child3_dup.style.display = "none";
 			child3_none.style.display= "none";
 			err = err + 1;
-		}else if(child2_update.style.display === "block" && child2_name.value === child3_name.value){
-			child3_dup.style.display = "block";
-			child3_none.style.display = "none";
-			child3_notchar.style.display = "none";
-			err = err + 1;
-		}else if(child1_update.style.display === "block" && child1_name.value === child3_name.value){
-			child3_dup.style.display = "block";
-			child3_none.style.display = "none";
-			child3_notchar.style.display = "none";
-			err = err + 1;
+		}else if(child1_update.style.display === "block" && child1_name.value !== ""){
+			let tmp_str1 = triming(child1_name.value);
+			let tmp_str3 = triming(child3_name.value);
+			if(tmp_str1 === tmp_str3){
+				child3_dup.style.display = "block";
+				child3_none.style.display = "none";
+				child3_notchar.style.display = "none";
+				err = err + 1;
+			}
+		}else if(child2_update.style.display === "block" && child2_name.value !== ""){
+			let tmp_str2 = triming(child2_name.value);
+			let tmp_str3 = triming(child3_name.value);
+			if(tmp_str2 === tmp_str3){
+				child3_dup.style.display = "block";
+				child3_none.style.display = "none";
+				child3_notchar.style.display = "none";
+				err = err + 1;
+			}
 		}else{
 			child3_none.style.display = "none";
 			child3_dup.style.display = "none";
