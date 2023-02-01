@@ -130,6 +130,7 @@ $(function(){
 			else if(child2_office === 'naru')message = message + 'なるなる';
 		}
 		if(child3_update.style.display === "block"){
+			count = count + 1;
 			message = message + '\n[児童名' + count + ']\n' + child3_name.value + '\n' + '[事業所' + count + ']\n';
 			if(child3_office === 'smileday') message = message + 'スマイル';
 			else if(child3_office === 'temu')message = message + 'てむてむ';
