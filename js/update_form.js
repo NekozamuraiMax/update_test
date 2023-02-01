@@ -27,3 +27,8 @@ document.getElementById('back3').addEventListener('click', () => {
 	child3_update.style.display = 'block';
 	delete_msg3.style.display = 'none';
 });
+
+function triming(test){
+	let tmp_str = test.trim();
+	return tmp_str.replace(/\s+/g, "");
+}
