@@ -28,7 +28,6 @@ document.getElementById('back3').addEventListener('click', () => {
 	delete_msg3.style.display = 'none';
 });
 
-alert('ok');
 function triming(text){
 	let tmp_str = text.trim();
 	return tmp_str.replace(/\s+/g, "");
